@@ -34,7 +34,7 @@ platform :ios do
 
   # Lanes
 
-  before_all do
+  def super_before()
     if app_name.length > 0
       puts "Proceeding with app_name: #{app_name}"
     else
