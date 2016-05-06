@@ -60,7 +60,7 @@ platform :ios do
     gym(
       clean: true,
       output_directory: build_dir,
-      archive_path: build_dir,
+      archive_path: build_dir + "/" + app_name,
       buildlog_path: build_dir + "/logs",
       scheme: scheme,
       workspace: workspace_name,
