@@ -113,7 +113,7 @@ platform :ios do
 
   def keychain(path, password)
     if password.length > 0
-      unlock_keychain(path, password)
+      unlock_keychain(path: path, password: password)
     else
       puts "Password not provided for keychain at #{path}, not unlocking."
     end
