@@ -83,7 +83,8 @@ platform :ios do
       workspace: workspace_name,
       output_directory: build_dir + "/test",
       buildlog_path: build_dir + "/test/logs",
-      derived_data_path: build_dir + "/test/deriveddata"
+      derived_data_path: build_dir + "/test/deriveddata",
+      skip_slack: true
   )
   end
 
