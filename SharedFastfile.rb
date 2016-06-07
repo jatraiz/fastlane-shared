@@ -48,7 +48,7 @@ platform :ios do
 
   desc "Run the unit tests"
   lane :test do
-    run_tests
+    run_tests(false)
   end
 
   # Helpers
@@ -76,7 +76,7 @@ platform :ios do
     sh "mkdir ../#{build_dir}"
   end
 
-  def run_tests()
+  def run_tests(skip_build=true)
     scan(
       output_types: 'junit',
       scheme: app_name,
@@ -84,7 +84,8 @@ platform :ios do
       output_directory: build_dir + "/test",
       buildlog_path: build_dir + "/test/logs",
       derived_data_path: build_dir + "/test/deriveddata",
-      skip_slack: true
+      skip_slack: true,
+      skip_build: skip_build
   )
   end
 
