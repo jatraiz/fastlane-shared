@@ -1,3 +1,5 @@
+# This fork allows for different hockey tokens to be used (in case you happen to have different apps as targets in a single workspace)
+
 # fastlane-shared
 
 Repository for fastlane files and utilities common to Raizlabs projects.
