@@ -19,10 +19,10 @@
 platform :ios do
 
   # Environment
-
   def app_name() "#{ENV['RZ_APP_NAME']}" end
-  def xcodeproj_name() "#{app_name}.xcodeproj" end
-  def workspace_name() "#{app_name}.xcworkspace" end
+  def xcodeproj_name() "#{ENV['RZ_APP_PROJECT_NAME']}.xcodeproj" end
+  def workspace_name() "#{ENV['RZ_APP_PROJECT_NAME']}.xcworkspace"  end
+
   def build_dir()
     dir = "#{ENV['RZ_BUILD_DIR']}"
     if dir.length == 0
