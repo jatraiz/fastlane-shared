@@ -20,6 +20,7 @@ platform :ios do
 
   # Environment
   def app_name() "#{ENV['RZ_APP_NAME']}" end
+  def product_name() "#{ENV['RZ_PRODUCT_NAME']}" end
   def xcodeproj_name() "#{ENV['RZ_APP_PROJECT_NAME']}.xcodeproj" end
   def workspace_name() "#{ENV['RZ_APP_PROJECT_NAME']}.xcworkspace"  end
 
@@ -93,7 +94,7 @@ platform :ios do
     hockey_app_id = "#{ENV['FL_HOCKEY_PUBLIC_IDENTIFIER']}"
     if hockey_app_id.length > 0
       puts "Uploading to Hockey..."
-      hockey(ipa: "#{build_dir}/#{app_name}.ipa")
+      hockey(ipa: "#{build_dir}/#{product_name}.ipa")
     else
       puts "Missing hockey env. variables, specify the fastlane 'FL_' variables and try again"
     end
