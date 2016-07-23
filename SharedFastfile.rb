@@ -21,6 +21,7 @@ platform :ios do
   # Environment
   def app_name() "#{ENV['RZ_APP_NAME']}" end
   def product_name() "#{ENV['RZ_PRODUCT_NAME']}" end
+  def clientKeychain_name() "#{ENV['CLIENT_KEYCHAIN_NAME']} end
   def xcodeproj_name() "#{ENV['RZ_APP_PROJECT_NAME']}.xcodeproj" end
   def workspace_name() "#{ENV['RZ_APP_PROJECT_NAME']}.xcworkspace"  end
 
@@ -43,7 +44,7 @@ platform :ios do
     end
 
     clean_build_dir
-    keychain("./Signing/#{app_name}.keychain", "#{ENV['RZ_APP_KEYCHAIN_PASSWORD']}")
+    keychain("./Signing/#{clientKeychain_name}.keychain", "#{ENV['RZ_APP_KEYCHAIN_PASSWORD']}")
     keychain("./Signing/Raizlabs.keychain", "#{ENV['RZ_KEYCHAIN_PASSWORD']}")
   end
 
