@@ -44,7 +44,7 @@ platform :ios do
     end
 
     clean_build_dir
-    keychain("./Signing/#{clientKeychain_name}.keychain", "#{ENV['RZ_APP_KEYCHAIN_PASSWORD']}")
+    keychain("./Signing/" + clientKeychain_name +"".keychain", "#{ENV['RZ_APP_KEYCHAIN_PASSWORD']}")
     keychain("./Signing/Raizlabs.keychain", "#{ENV['RZ_KEYCHAIN_PASSWORD']}")
   end
 
