@@ -1,4 +1,4 @@
-# This fork allows for different hockey tokens to be used (in case you happen to have different apps as targets in a single workspace)
+# This fork is used to adapt to an inherited project's naming and target quirks
 
 # fastlane-shared
 
