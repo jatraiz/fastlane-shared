@@ -37,12 +37,6 @@ platform :ios do
   # Lanes
 
   def super_before()
-    if app_name.length > 0
-      puts "Proceeding with app_name: #{app_name}"
-    else
-      raise "$RZ_APP_NAME environment variable must be set".red
-    end
-
     clean_build_dir
     keychain("./Signing/#{clientKeychain_name}.keychain", "#{ENV['RZ_APP_KEYCHAIN_PASSWORD']}")
     keychain("./Signing/Raizlabs.keychain", "#{ENV['RZ_KEYCHAIN_PASSWORD']}")
