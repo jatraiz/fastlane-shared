@@ -42,11 +42,6 @@ platform :ios do
     keychain("./Signing/Raizlabs.keychain", "#{ENV['RZ_KEYCHAIN_PASSWORD']}")
   end
 
-  desc "Run the unit tests"
-  lane :test do
-    run_tests(false)
-  end
-
   # Helpers
 
   def build(scheme, export_method, use_legacy_build = true)
