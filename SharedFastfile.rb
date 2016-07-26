@@ -67,19 +67,6 @@ platform :ios do
     sh "mkdir ../#{build_dir}"
   end
 
-  def run_tests(skip_build=true)
-    scan(
-      output_types: 'junit',
-      scheme: app_name,
-      workspace: workspace_name,
-      output_directory: build_dir + "/test",
-      buildlog_path: build_dir + "/test/logs",
-      derived_data_path: build_dir + "/test/deriveddata",
-      skip_slack: true,
-      skip_build: skip_build
-  )
-  end
-
   def upload_to_hockey()
     hockey_app_id = "#{ENV['FL_HOCKEY_PUBLIC_IDENTIFIER']}"
     if hockey_app_id.length > 0
